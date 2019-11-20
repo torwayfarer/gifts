@@ -2,15 +2,10 @@ import React from 'react';
 import Countdown from './Countdown';
 
 import {
-    Link as RouterLink,
-    withRouter,
-    Redirect
+    withRouter
 } from "react-router-dom";
 
 class PostApply extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     if (this.props.location.state) {

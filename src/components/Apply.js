@@ -18,7 +18,6 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Copyright from './Utils.js';
 import PostApply from './PostApply';
 import MenuItem from '@material-ui/core/MenuItem';
 import {
@@ -124,7 +123,7 @@ class Apply extends React.Component {
           redirectWelcome: false,
         };
       }
-      
+
       handleInputChange = (event) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -182,12 +181,12 @@ class Apply extends React.Component {
       if (event.id) {
         console.log('alskdklq' + event.id)
         axios
-          .put(`http:/localhost:8000/api/forms/${this.state.telephone}/`, item);
+          .put(`https://gifts-with-love.herokuapp.com/api/forms/${this.state.telephone}/`, item);
         return;
       }
       console.log('alskdklq1111')
       axios
-        .post("http://localhost:8000/api/forms/", item)
+        .post("https://gifts-with-love.herokuapp.com/api/forms/", item)
       this.setState({
         firstName: '',
         lastName: '',
@@ -265,7 +264,7 @@ class Apply extends React.Component {
                               control={
 
                                 <Checkbox
-                                  
+
                                   checked={this.Collage}
                                   onChange={this.handleChange2("Collage")}
                                   value="Collage"
@@ -277,7 +276,7 @@ class Apply extends React.Component {
                               control={
 
                                 <Checkbox
-                                  
+
                                   checked={this.Electronic_design}
                                   onChange={this.handleChange2("Electronic_design")}
                                   value="Electronic_design"
@@ -289,7 +288,7 @@ class Apply extends React.Component {
                               control={
 
                                 <Checkbox
-                                  
+
                                   checked={this.DreamArt}
                                   onChange={this.handleChange2("DreamArt")}
                                   value="DreamArt"
@@ -301,7 +300,7 @@ class Apply extends React.Component {
                               control={
 
                                 <Checkbox
-                                  
+
                                   checked={this.Print_no_edit}
                                   onChange={this.handleChange2("Print_no_edit")}
                                   value="Print_no_edit"
@@ -312,7 +311,7 @@ class Apply extends React.Component {
                           </FormGroup>
                           <FormLabel component="legend">Выберите размер холста</FormLabel>
                                   <TextField
-                                    
+
                                     select
                                     label="Размер"
                                     value={this.size_of_picture}
