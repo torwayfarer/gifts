@@ -1,46 +1,32 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
   background-color: #282c34;
-}
-.form-title {
-  cursor: pointer;
-}
-.completed-form {
-  text-decoration: line-through;
-}
-.tab-list > span {
-  padding: 5px 8px;
-  border: 1px solid #282c34;
-  border-radius: 10px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-.tab-list > span.active {
-  background-color: #282c34;
-  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.custom1 {
-  background-color: #ffffff;
+.App-link {
+  color: #09d3ac;
 }
 
-#container1 {
-  padding:50px;
-  background-color:#FFF;
+@import url(https://fonts.googleapis.com/css?family=Six+Caps);
+
+html * {
+  box-sizing: border-box;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
 .container {
   width: 100%;
@@ -68,6 +54,7 @@ body {
     letter-spacing: 0.05em;
     cursor: pointer;
     padding: 0.2em;
+    // background: rgba(50, 50, 50, 0.5);
     background: #333;
     z-index: 1;
     border: solid var(--border-width) transparent;
@@ -212,67 +199,10 @@ body {
     justify-content: center;
   }
 }
+
 @media (min-width: 1200px) {
   .border-animation {
     font-size: 6em;
     line-height: 1em;
-  }
-}
-
-
-.Countdown{
-  margin: 10px auto;
-  padding-bottom: 20px;
-}
-
-.Countdown-col{
-  display: inline-block;
-}
-
-.Countdown-col-element{
-  display: inline-block;
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.Countdown-col-element strong{
-  font-size: 50px;
-}
-
-@media only screen and (max-width: 400px) {
-  .font-question {
-    font-size: 6vw; /* Red */
-    font-weight: bold;
-  }
-  .font-header {
-    font-size: 50px;
-  }
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-
-  .font-question {
-    font-size: 5vw; /* Red */
-    font-weight: bold;
-  }
-  .font-header {
-    font-size: 10px;
-  }
-}
-
-/* Desktop Styles */
-@media (min-width: 961px) {
-  .font-question {
-    font-size: 2.2vw;
-    font-weight: bold;
-
-  }
-  .font-answer {
-    font-size: 1.7vw;
-  }
-  .font-header {
-    font-size: 50px;
   }
 }
